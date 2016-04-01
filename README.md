@@ -1,6 +1,10 @@
 # mongodb-moment
 
-Make the mongodb node driver able to serialize moment.js objects
+
+Make the mongodb node driver able to serialize moment.js objects.
+
+[![Build Status](https://travis-ci.org/vkarpov15/mongodb-moment.svg?branch=master)](https://travis-ci.org/vkarpov15/mongodb-moment)
+
 
 ## example
 

@@ -4,7 +4,11 @@ const assert = require('assert');
 const co = require('co');
 const mongodb = require('mongodb');
 
-/** Make the mongodb node driver able to serialize moment.js objects */
+/**
+ * Make the mongodb node driver able to serialize moment.js objects.
+ *
+ * [![Build Status](https://travis-ci.org/vkarpov15/mongodb-moment.svg?branch=master)](https://travis-ci.org/vkarpov15/mongodb-moment)
+ */
 describe('mongodb-moment', function() {
   let db;
 
