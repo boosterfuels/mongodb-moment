@@ -1,0 +1,25 @@
+{
+  "name": "mongodb-moment",
+  "version": "0.0.1.",
+  "description": "Make the mongodb node driver able to serialize moment.js objects",
+  "keywords": [
+    "mongodb",
+    "moment",
+    "date"
+  ],
+  "scripts": {
+    "test": "env NODE_PATH='../' mocha ./test/*.test.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "co": "4.6.0",
+    "mocha": "2.2.4",
+    "moment": "2.1.x",
+    "mongodb": "2.1.x"
+  },
+  "bin": "./bin/dookie.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vkarpov15/mongodb-moment.git"
+  }
+}
