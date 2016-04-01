@@ -1,6 +1,6 @@
 {
   "name": "mongodb-moment",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Make the mongodb node driver able to serialize moment.js objects",
   "keywords": [
     "mongodb",
