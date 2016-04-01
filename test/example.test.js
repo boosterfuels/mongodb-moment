@@ -4,6 +4,7 @@ const assert = require('assert');
 const co = require('co');
 const mongodb = require('mongodb');
 
+/** Make the mongodb node driver able to serialize moment.js objects */
 describe('mongodb-moment', function() {
   let db;
 
@@ -27,7 +28,12 @@ describe('mongodb-moment', function() {
 
       const res = yield db.collection('test').findOne();
       assert.deepEqual(res, { _id: id, createdAt: new Date('2011-06-01') });
+      // acquit:ignore:start
       done();
-    }).catch(done);
+      // acquit:ignore:end
+    })
+    // acquit:ignore:start
+    .catch(done);
+    // acquit:ignore:end
   });
 });
