@@ -10,15 +10,21 @@ const mongodb = require('mongodb');
  * [![Build Status](https://travis-ci.org/vkarpov15/mongodb-moment.svg?branch=master)](https://travis-ci.org/vkarpov15/mongodb-moment)
  */
 describe('mongodb-moment', function() {
+  let client;
   let db;
 
   before(function(done) {
     co(function*() {
-      db = yield mongodb.MongoClient.
-        connect('mongodb://localhost:27017/moment');
+      client = yield mongodb.MongoClient.
+        connect('mongodb://localhost:27017/moment', { useNewUrlParser: true });
+      db = client.db();
       yield db.dropDatabase();
       done();
     }).catch(done)
+  });
+
+  after(function() {
+    return client.close();
   });
 
   it('example', function(done) {
