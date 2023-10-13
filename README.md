@@ -1,4 +1,12 @@
+# This repo is archived
 
+Just do this instead:
+
+```js
+Object.getPrototypeOf(require('moment-timezone')()).toBSON = function () {
+  return this.toDate()
+}
+```
 
 # mongodb-moment
 
